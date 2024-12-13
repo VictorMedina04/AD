@@ -99,8 +99,6 @@ public class MonumentoRepository {
                 .nombreMonumento("La Gran Muralla China")
                 .urlImagen("https://upload.wikimedia.org/wikipedia/commons/e/e3/The_Great_Wall_of_China_at_Jinshanling-edit.jpg")
                 .build());
-
-
     }
 
     public Monumento add(Monumento monumento) {
