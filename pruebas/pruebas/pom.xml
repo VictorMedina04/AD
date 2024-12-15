@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>ejerciciosdto</artifactId>
+	<artifactId>pruebas</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ejerciciosdto</name>
+	<name>pruebas</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
@@ -53,10 +53,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-autoconfigure</artifactId>
 		</dependency>
 	</dependencies>
 

@@ -1,12 +1,13 @@
-package com.example.ejerciciosdto;
+package com.example.pruebas;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-public class EjerciciosdtoApplication {
+@SpringBootApplication
+public class PruebasApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(EjerciciosdtoApplication.class, args);
+		SpringApplication.run(PruebasApplication.class, args);
 	}
 
 }

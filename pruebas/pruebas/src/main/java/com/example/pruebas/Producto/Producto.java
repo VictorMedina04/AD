@@ -1,4 +1,4 @@
-package com.example.ejerciciosdto.Alumno;
+package com.example.pruebas.Producto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,8 +9,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Direccion {
+public class Producto {
 
     private Long id;
-    private String tipoVia, linea1, linea2, cp, poblacion, provincia;
+    private String nombre;
+    private String descripcion;
+    private double precio;
 }
