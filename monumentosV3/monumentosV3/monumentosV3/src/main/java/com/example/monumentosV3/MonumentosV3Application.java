@@ -1,13 +1,13 @@
-package com.example.monumentoV3;
+package com.example.monumentosV3;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MonumentoV3Application {
+public class MonumentosV3Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MonumentoV3Application.class, args);
+		SpringApplication.run(MonumentosV3Application.class, args);
 	}
 
 }

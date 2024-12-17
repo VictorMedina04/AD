@@ -1,10 +1,10 @@
-package com.example.monumentoV3;
+package com.example.monumentosV3;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MonumentoV3ApplicationTests {
+class MonumentosV3ApplicationTests {
 
 	@Test
 	void contextLoads() {

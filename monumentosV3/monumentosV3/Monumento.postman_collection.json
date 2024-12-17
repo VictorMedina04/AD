@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "c41a9a38-a33b-4550-aa6a-93fff2500adb",
+		"name": "Monumento",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "38617657"
+	},
+	"item": [
+		{
+			"name": "listado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/monumento/lista"
+			},
+			"response": []
+		},
+		{
+			"name": "monumento por id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "localhost:8080/monumento/1"
+			},
+			"response": []
+		},
+		{
+			"name": "añadir monumento",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"id\": 6,\r\n    \"nombreMonumento\": \"Puerta del Sol\",\r\n    \"codigoPais\": \"ES\",\r\n    \"nombrePais\": \"España\",\r\n    \"nombreCiudad\": \"Madrid\",\r\n    \"latitud\": 40.416775,\r\n    \"longitud\": -3.70379,\r\n    \"descripcion\": \"Un famoso punto de referencia en Madrid.\",\r\n    \"urlFoto\": \"http://example.com/puerta_del_sol.jpg\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/monumento"
+			},
+			"response": []
+		},
+		{
+			"name": "editar monumento",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"id\": 4,\r\n        \"nombrePais\": \"Rusia\",\r\n        \"nombreCiudad\": \"Moscú\",\r\n        \"nombreMonumento\": \"Kremlin\",\r\n        \"descripcion\": \"El Kremlin de Moscú es una histórica ciudadela fortificada y un núcleo político y religioso. Es conocido por su distintiva arquitectura, que incluye catedrales ortodoxas con cúpulas doradas, el Gran Palacio del Kremlin, y la Torre Spasskaya, rematada con una estrella roja. Este complejo, que data del siglo XII, es símbolo de la historia y el poder ruso.\",\r\n        \"urlImagen\": \"https://upload.wikimedia.org/wikipedia/commons/a/a3/Moscow_Kremlin_view_from_the_cathedral.jpg\",\r\n        \"codigoPais\": \"RU\",\r\n        \"latitud\": 55.751244,\r\n        \"longitud\": 37.618423\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/monumento/4"
+			},
+			"response": []
+		},
+		{
+			"name": "eliminar monumento",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "localhost:8080/monumento/6"
+			},
+			"response": []
+		}
+	]
+}
