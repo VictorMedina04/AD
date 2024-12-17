@@ -148,7 +148,7 @@ public class Run {
                 .curso(curso2)
                 .direccion(direccion2)
                 .build();
-        GetAlumnoDto alumnoDTO = GetAlumnoDto.ofAlumno(alumno1);
+        GetAlumnoDto alumnoDTO1 = GetAlumnoDto.ofAlumno(alumno1);
         GetAlumnoDto alumnoDTO2 = GetAlumnoDto.ofAlumno(alumno2);
 
         System.out.println(productoDTO);
@@ -159,7 +159,7 @@ public class Run {
         System.out.println(productoDTO6);
         System.out.println(productoDTO7);
         System.out.println(productoDTO8);
-        System.out.println(alumnoDTO);
+        System.out.println(alumnoDTO1);
         System.out.println(alumnoDTO2);
 
 
