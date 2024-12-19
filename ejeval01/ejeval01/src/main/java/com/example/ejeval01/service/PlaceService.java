@@ -32,5 +32,15 @@ public class PlaceService {
         return listado;
     }
 
+    public Place createPlace(Place place) {
+        if (place == null)
+            throw new PlaceNotFoundException("No hay un place");
+        placeRepository.add(place);
+        return place;
+    }
+
+    public Place UpdatePlace(Place place, Long id) {
+        return placeRepository.update(place, id).orElseThrow(() -> new PlaceNotFoundException("No se puede editar"));
+    }
 
 }

@@ -18,7 +18,7 @@ public class PlaceRepository {
     @PostConstruct
     public void init() {
         Place place1 = Place.builder()
-                .name("af")
+                .name("af1")
                 .direccion("32")
                 .imagen("http//:")
                 .localizacion("aqui")
@@ -26,10 +26,10 @@ public class PlaceRepository {
         add(place1);
 
         Place place2 = Place.builder()
-                .name("af")
-                .direccion("32")
+                .name("af2")
+                .direccion("33")
                 .imagen("http//:")
-                .localizacion("aqui")
+                .localizacion("aqui2")
                 .listaTags(new ArrayList<>(List.of("ej1", "ej2"))).build();
         add(place2);
 
