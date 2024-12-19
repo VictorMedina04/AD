@@ -23,6 +23,9 @@ public class Place {
 
 
     public void addTag(String tag) {
+        if (listaTags.stream().noneMatch(t -> t.equalsIgnoreCase(tag)))
+            listaTags.add(tag);
+
         listaTags.add(tag);
     }
     public void removeTag(String tag) {
