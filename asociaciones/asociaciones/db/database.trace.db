@@ -133,7 +133,7 @@ insert into categoria(id,nombre) values(nextval('categorias_seq'),"Cat1") [42122
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:41:09.807614+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "Cat2" no encontrada
 Column "Cat2" not found; SQL statement:
@@ -193,7 +193,7 @@ insert into categoria(id,nombre) values(nextval('categorias_seq'),"Cat2") [42122
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:41:09.813616+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "Cat3" no encontrada
 Column "Cat3" not found; SQL statement:
@@ -253,7 +253,7 @@ insert into categoria(id,nombre) values(nextval('categorias_seq'),"Cat3") [42122
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:41:09.819615+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Sequence "CATEGORIA_ID" no encontrado
 Sequence "CATEGORIA_ID" not found; SQL statement:
@@ -313,7 +313,7 @@ insert into productos(nombre,precio, descripcion,id,categoria_id) values('Uno',1
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:41:09.824615+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Función "URRVAL" no encontrada
 Function "URRVAL" not found; SQL statement:
@@ -382,7 +382,7 @@ insert into productos(nombre,precio, descripcion,id,categoria_id) values('dos',2
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:41:31.904907+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "Cat1" no encontrada
 Column "Cat1" not found; SQL statement:
@@ -442,7 +442,7 @@ insert into categoria(id,nombre) values(nextval('categorias_seq'),"Cat1") [42122
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:41:31.914512+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "Cat2" no encontrada
 Column "Cat2" not found; SQL statement:
@@ -502,7 +502,7 @@ insert into categoria(id,nombre) values(nextval('categorias_seq'),"Cat2") [42122
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:41:31.920030+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "Cat3" no encontrada
 Column "Cat3" not found; SQL statement:
@@ -562,7 +562,7 @@ insert into categoria(id,nombre) values(nextval('categorias_seq'),"Cat3") [42122
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:41:31.924035+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: Current value of sequence "PUBLIC.CATEGORIA_SEQ" is not yet defined in this session; SQL statement:
 insert into productos(nombre,precio, descripcion,id,categoria_id) values('Uno',1,'uno1',nextval('productos_seq'),currval('categoria_seq')) -- ('Uno', 1, 'uno1', NEXTVAL('productos_seq'), CURRVAL('categoria_seq')) [90148-232]
@@ -621,7 +621,7 @@ insert into productos(nombre,precio, descripcion,id,categoria_id) values('Uno',1
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:41:31.928029+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Función "URRVAL" no encontrada
 Function "URRVAL" not found; SQL statement:
@@ -690,7 +690,7 @@ insert into productos(nombre,precio, descripcion,id,categoria_id) values('dos',2
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:42:08.967012+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "Cat1" no encontrada
 Column "Cat1" not found; SQL statement:
@@ -750,7 +750,7 @@ insert into categoria(id,nombre) values(nextval('categorias_seq'),"Cat1") [42122
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:42:08.978997+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "Cat2" no encontrada
 Column "Cat2" not found; SQL statement:
@@ -810,7 +810,7 @@ insert into categoria(id,nombre) values(nextval('categorias_seq'),"Cat2") [42122
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:42:08.984014+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "Cat3" no encontrada
 Column "Cat3" not found; SQL statement:
@@ -870,7 +870,7 @@ insert into categoria(id,nombre) values(nextval('categorias_seq'),"Cat3") [42122
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:42:08.989981+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Sequence "CATEGORIAS_SEQ" no encontrado
 Sequence "CATEGORIAS_SEQ" not found; SQL statement:
@@ -930,7 +930,7 @@ insert into productos(nombre,precio, descripcion,id,categoria_id) values('Uno',1
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:42:08.995981+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Función "URRVAL" no encontrada
 Function "URRVAL" not found; SQL statement:
@@ -999,7 +999,7 @@ insert into productos(nombre,precio, descripcion,id,categoria_id) values('dos',2
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:42:50.397047+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "Cat1" no encontrada
 Column "Cat1" not found; SQL statement:
@@ -1059,7 +1059,7 @@ insert into categoria(id,nombre) values(nextval('categoria_seq'),"Cat1") [42122-
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:42:50.407047+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "Cat2" no encontrada
 Column "Cat2" not found; SQL statement:
@@ -1119,7 +1119,7 @@ insert into categoria(id,nombre) values(nextval('categoria_seq'),"Cat2") [42122-
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:42:50.411587+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "Cat3" no encontrada
 Column "Cat3" not found; SQL statement:
@@ -1179,7 +1179,7 @@ insert into categoria(id,nombre) values(nextval('categoria_seq'),"Cat3") [42122-
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:42:50.416587+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: Current value of sequence "PUBLIC.CATEGORIA_SEQ" is not yet defined in this session; SQL statement:
 insert into productos(nombre,precio, descripcion,id,categoria_id) values('Uno',1,'uno1',nextval('productos_seq'),currval('categoria_seq')) -- ('Uno', 1, 'uno1', NEXTVAL('productos_seq'), CURRVAL('categoria_seq')) [90148-232]
@@ -1238,7 +1238,7 @@ insert into productos(nombre,precio, descripcion,id,categoria_id) values('Uno',1
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:42:50.421588+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Función "URRVAL" no encontrada
 Function "URRVAL" not found; SQL statement:
@@ -1307,7 +1307,7 @@ insert into productos(nombre,precio, descripcion,id,categoria_id) values('dos',2
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:43:00.187971+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "Cat1" no encontrada
 Column "Cat1" not found; SQL statement:
@@ -1367,7 +1367,7 @@ insert into categoria(id,nombre) values(nextval('categoria_seq'),"Cat1") [42122-
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:43:00.197938+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "Cat2" no encontrada
 Column "Cat2" not found; SQL statement:
@@ -1427,7 +1427,7 @@ insert into categoria(id,nombre) values(nextval('categoria_seq'),"Cat2") [42122-
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:43:00.204963+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Columna "Cat3" no encontrada
 Column "Cat3" not found; SQL statement:
@@ -1487,7 +1487,7 @@ insert into categoria(id,nombre) values(nextval('categoria_seq'),"Cat3") [42122-
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:43:00.211941+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: Current value of sequence "PUBLIC.CATEGORIA_SEQ" is not yet defined in this session; SQL statement:
 insert into productos(nombre,precio, descripcion,id,categoria_id) values('Uno',1,'uno1',nextval('productos_seq'),currval('categoria_seq')) -- ('Uno', 1, 'uno1', NEXTVAL('productos_seq'), CURRVAL('categoria_seq')) [90148-232]
@@ -1546,7 +1546,7 @@ insert into productos(nombre,precio, descripcion,id,categoria_id) values('Uno',1
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:43:00.216941+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: Current value of sequence "PUBLIC.CATEGORIA_SEQ" is not yet defined in this session; SQL statement:
 insert into productos(nombre,precio, descripcion,id,categoria_id) values('dos',2,'dos2',nextval('productos_seq'),currval('categoria_seq')) -- ('dos', 2, 'dos2', NEXTVAL('productos_seq'), CURRVAL('categoria_seq')) [90148-232]
@@ -1605,7 +1605,7 @@ insert into productos(nombre,precio, descripcion,id,categoria_id) values('dos',2
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
-	at com.salesianos.data.DataApplication.main(DataApplication.java:10)
+	at com.salesianos.asociaciones.DataApplication.main(DataApplication.java:10)
 2025-01-13 12:45:31.350626+01:00 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * FROM PRODUCTO PRODUCTO [*]PRODUCTOS"
 Syntax error in SQL statement "SELECT * FROM PRODUCTO PRODUCTO [*]PRODUCTOS"; SQL statement:

@@ -1,7 +1,7 @@
-package com.salesianos.data.controller;
+package com.salesianos.data.controllers;
 
-import com.salesianos.data.service.ProductoService;
 import com.salesianos.data.models.Producto;
+import com.salesianos.data.services.ProductoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequiredArgsConstructor
 @RestController
-@RequestMapping("")
+@RequestMapping("/product/")
+@RequiredArgsConstructor
 public class ProductoController {
 
     private final ProductoService productoService;
@@ -44,4 +44,6 @@ public class ProductoController {
         productoService.delete(id);
         return ResponseEntity.noContent().build();
     }
+
+
 }

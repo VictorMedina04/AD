@@ -13,22 +13,22 @@ import java.util.Objects;
 @Getter
 @ToString
 @Entity
-@Table(name="producto")
+@Table(name="productos")
 public class Producto {
 
     @Id
     @GeneratedValue
     private Long id;
 
+    @Column(length = 512)
     private String nombre;
+
+    @Column(name = "precio")
     private double precio;
 
     @Column(length = 4000, columnDefinition = "text")
     private String descripcion;
 
-    @ManyToOne
-    @JoinColumn(name = "categoria_id",foreignKey = @ForeignKey(name = "fk_producto_categoria"))
-    private Categoria categoria;
 
     @Override
     public final boolean equals(Object o) {
