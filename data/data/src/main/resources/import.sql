@@ -1,0 +1,2 @@
+insert into productos(nombre,precio, descripcion,id) values('Uno',1,'uno1',nextval('productos_seq'));
+insert into productos(nombre,precio, descripcion,id) values('dos',2,'dos2',nextval('productos_seq'));
