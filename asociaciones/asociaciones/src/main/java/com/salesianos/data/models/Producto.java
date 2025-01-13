@@ -1,4 +1,4 @@
-package com.salesianos.data;
+package com.salesianos.data.models;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -13,7 +13,7 @@ import java.util.Objects;
 @Getter
 @ToString
 @Entity
-@Table(name="productos")
+@Table(name="producto")
 public class Producto {
 
     @Id
@@ -26,6 +26,9 @@ public class Producto {
     @Column(length = 4000, columnDefinition = "text")
     private String descripcion;
 
+    @ManyToOne
+    @JoinColumn(name = "categoria_id",foreignKey = @ForeignKey(name = "fk_producto_categoria"))
+    private Categoria categoria;
 
     @Override
     public final boolean equals(Object o) {

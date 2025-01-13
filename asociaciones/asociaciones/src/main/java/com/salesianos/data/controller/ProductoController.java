@@ -1,5 +1,7 @@
-package com.salesianos.data;
+package com.salesianos.data.controller;
 
+import com.salesianos.data.service.ProductoService;
+import com.salesianos.data.models.Producto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

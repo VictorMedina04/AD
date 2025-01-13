@@ -1,5 +1,7 @@
-package com.salesianos.data;
+package com.salesianos.data.service;
 
+import com.salesianos.data.models.Producto;
+import com.salesianos.data.repos.ProductoRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
