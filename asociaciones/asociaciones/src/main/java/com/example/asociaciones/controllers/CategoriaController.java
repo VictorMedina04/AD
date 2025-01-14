@@ -25,8 +25,8 @@ public class CategoriaController {
     }
 
     @GetMapping("/{id}")
-    public Categoria findById(@PathVariable Long id) {
-        return categoriaService.findById(id);
+    public GetCategoriaDto findById(@PathVariable Long id) {
+        return GetCategoriaDto.of(categoriaService.findById(id));
     }
 
     @PostMapping

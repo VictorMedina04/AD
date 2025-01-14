@@ -1,5 +1,6 @@
 package com.example.asociaciones.models;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.proxy.HibernateProxy;
@@ -25,6 +26,8 @@ public class Categoria {
 
     @OneToMany(mappedBy = "categoria", fetch = FetchType.EAGER)
     @Builder.Default
+    @ToString.Exclude
+    //@JsonManagedReference
     private List<Producto> productos = new ArrayList<>();
 
     @Override

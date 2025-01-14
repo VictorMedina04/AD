@@ -27,8 +27,8 @@ public class ProductoController {
     }
 
     @GetMapping("/{id}")
-    public Producto getById(@PathVariable Long id) {
-        return productoService.findById(id);
+    public GetProductoDto getById(@PathVariable Long id) {
+        return GetProductoDto.of(productoService.findById(id));
     }
 
     @PostMapping
