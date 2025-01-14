@@ -1,10 +1,10 @@
-package com.salesianos.asociaciones;
+package com.example.asociaciones;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DataApplicationTests {
+class AsociacionesApplicationTests {
 
 	@Test
 	void contextLoads() {

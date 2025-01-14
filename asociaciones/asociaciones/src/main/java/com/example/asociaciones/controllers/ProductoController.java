@@ -1,9 +1,9 @@
-package com.salesianos.asociaciones.controller;
+package com.example.asociaciones.controllers;
 
-import com.salesianos.asociaciones.dto.EditProductoCmd;
-import com.salesianos.asociaciones.dto.GetProductoDto;
-import com.salesianos.asociaciones.service.ProductoService;
-import com.salesianos.asociaciones.models.Producto;
+import com.example.asociaciones.dto.EditProductoCmd;
+import com.example.asociaciones.dto.GetProductoDto;
+import com.example.asociaciones.models.Producto;
+import com.example.asociaciones.services.ProductoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/product/")
+@RequestMapping("/product")
 @RequiredArgsConstructor
 public class ProductoController {
 

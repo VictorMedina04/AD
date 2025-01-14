@@ -1,9 +1,9 @@
-package com.salesianos.asociaciones.service;
+package com.example.asociaciones.services;
 
-import com.salesianos.asociaciones.dto.EditProductoCmd;
-import com.salesianos.asociaciones.models.Producto;
-import com.salesianos.asociaciones.repos.CategoriaRepository;
-import com.salesianos.asociaciones.repos.ProductoRepository;
+import com.example.asociaciones.dto.EditProductoCmd;
+import com.example.asociaciones.models.Producto;
+import com.example.asociaciones.repos.CategoriaRepository;
+import com.example.asociaciones.repos.ProductoRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -18,11 +18,6 @@ public class ProductoService {
     private final CategoriaRepository categoriaRepository;
 
     public List<Producto> findAll() {
-        /*
-            Obtener todos los productos
-            Si la lista está vacía
-                Lanzo excepción
-         */
         List<Producto> result = productoRepository.findAll();
         if (result.isEmpty())
             throw new EntityNotFoundException("No hay productos con esos criterios de búsqueda");
@@ -38,7 +33,6 @@ public class ProductoService {
         return productoRepository.save(Producto.builder()
                 .nombre(nuevo.nombre())
                 .precio(nuevo.precio())
-                //.categoria(categoriaRepository.getReferenceById(nuevo.categoriaId()))
                 .categoria(categoriaRepository.findById(nuevo.categoriaId()).orElse(null))
                 .descripcion(nuevo.descripcion())
                 .build());
@@ -50,7 +44,6 @@ public class ProductoService {
                     old.setNombre(editProductoCmd.nombre());
                     old.setDescripcion(editProductoCmd.descripcion());
                     old.setPrecio(editProductoCmd.precio());
-                    //old.setCategoria(categoriaRepository.getReferenceById(editProductoCmd.categoriaId()));
                     old.setCategoria(categoriaRepository.findById(editProductoCmd.categoriaId()).orElse(null));
                     return productoRepository.save(old);
                 })

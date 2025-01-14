@@ -1,6 +1,6 @@
-package com.salesianos.asociaciones.dto;
+package com.example.asociaciones.dto;
 
-import com.salesianos.asociaciones.models.Producto;
+import com.example.asociaciones.models.Producto;
 
 public record GetProductoDto(
         Long id,

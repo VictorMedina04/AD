@@ -1,6 +1,6 @@
-package com.salesianos.asociaciones.dto;
+package com.example.asociaciones.dto;
 
-import com.salesianos.asociaciones.models.Categoria;
+import com.example.asociaciones.models.Categoria;
 
 public record GetCategoriaDto(Long id, String nombre) {
 

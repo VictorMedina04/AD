@@ -1,35 +1,31 @@
-package com.salesianos.asociaciones.models;
+package com.example.asociaciones.models;
 
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.proxy.HibernateProxy;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Setter
-@Getter
-@ToString
 @Entity
-@Table(name="producto")
-public class Producto {
+@ToString
+public class Categoria {
 
     @Id
     @GeneratedValue
     private Long id;
 
     private String nombre;
-    private double precio;
 
-    @Column(length = 4000, columnDefinition = "text")
-    private String descripcion;
-
-    @ManyToOne
-    @JoinColumn(name = "categoria_id",
-            foreignKey = @ForeignKey(name = "fk_producto_categoria"))
-    private Categoria categoria;
+    @OneToMany(mappedBy = "categoria", fetch = FetchType.EAGER)
+    @Builder.Default
+    private List<Producto> productos = new ArrayList<>();
 
     @Override
     public final boolean equals(Object o) {
@@ -38,14 +34,12 @@ public class Producto {
         Class<?> oEffectiveClass = o instanceof HibernateProxy ? ((HibernateProxy) o).getHibernateLazyInitializer().getPersistentClass() : o.getClass();
         Class<?> thisEffectiveClass = this instanceof HibernateProxy ? ((HibernateProxy) this).getHibernateLazyInitializer().getPersistentClass() : this.getClass();
         if (thisEffectiveClass != oEffectiveClass) return false;
-        Producto producto = (Producto) o;
-        return getId() != null && Objects.equals(getId(), producto.getId());
+        Categoria categoria = (Categoria) o;
+        return getId() != null && Objects.equals(getId(), categoria.getId());
     }
 
     @Override
     public final int hashCode() {
         return this instanceof HibernateProxy ? ((HibernateProxy) this).getHibernateLazyInitializer().getPersistentClass().hashCode() : getClass().hashCode();
     }
-
-
 }

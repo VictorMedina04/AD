@@ -1,4 +1,5 @@
-package com.salesianos.asociaciones.error;
+package com.example.asociaciones.error;
+
 
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.http.HttpStatus;
@@ -10,9 +11,9 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import java.net.URI;
 
 @RestControllerAdvice
+
 public class GlobalErrorController
         extends ResponseEntityExceptionHandler {
-
     @ExceptionHandler(EntityNotFoundException.class)
     public ProblemDetail handleProductNotFound(EntityNotFoundException ex) {
         ProblemDetail result = ProblemDetail

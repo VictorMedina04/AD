@@ -1,4 +1,4 @@
-package com.salesianos.asociaciones.dto;
+package com.example.asociaciones.dto;
 
 public record EditProductoCmd(
         String nombre,

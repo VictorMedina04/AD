@@ -1,6 +1,6 @@
-package com.salesianos.asociaciones.repos;
+package com.example.asociaciones.repos;
 
-import com.salesianos.asociaciones.models.Categoria;
+import com.example.asociaciones.models.Categoria;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CategoriaRepository extends JpaRepository<Categoria,Long> {

@@ -1,7 +1,8 @@
-package com.salesianos.asociaciones.service;
+package com.example.asociaciones.services;
 
-import com.salesianos.asociaciones.models.Categoria;
-import com.salesianos.asociaciones.repos.CategoriaRepository;
+import com.example.asociaciones.dto.EditCategoriaCmd;
+import com.example.asociaciones.models.Categoria;
+import com.example.asociaciones.repos.CategoriaRepository;
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -23,21 +24,26 @@ public class CategoriaService {
 
     public Categoria findById(Long id) {
         return categoriaRepository.findById(id)
-                .orElseThrow(() -> new EntityNotFoundException("No hay categoria con ID: "+ id));
+                .orElseThrow(() -> new EntityNotFoundException("No hay categoria con ID: " + id));
 
     }
 
-    public Categoria save (Categoria categoria) {
-        return categoriaRepository.save(categoria);
+    public Categoria save(EditCategoriaCmd categoria) {
+        return categoriaRepository.save(
+                Categoria.builder()
+                        .nombre(categoria.nombre())
+                        .productos(categoria.productos())
+                        .build()
+        );
     }
 
-    public Categoria edit(Categoria categoria, Long id) {
+    public Categoria edit(EditCategoriaCmd categoria, Long id) {
         return categoriaRepository.findById(id)
                 .map(old -> {
-                    old.setNombre(categoria.getNombre());
+                    old.setNombre(categoria.nombre());
                     return categoriaRepository.save(old);
                 })
-                .orElseThrow(() -> new EntityNotFoundException("No hay categoria con ID: "+ id));
+                .orElseThrow(() -> new EntityNotFoundException("No hay categoria con ID: " + id));
 
     }
 
