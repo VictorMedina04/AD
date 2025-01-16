@@ -1,6 +1,5 @@
-package com.example.asociaciones.models;
+package com.example.ejercicio02.eje1;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.proxy.HibernateProxy;
@@ -11,27 +10,22 @@ import java.util.Objects;
 
 @Getter
 @Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
 @Entity
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @ToString
 public class Categoria {
 
     @Id
     @GeneratedValue
     private Long id;
-
     private String nombre;
 
-    @OneToMany(mappedBy = "categoria", fetch = FetchType.EAGER)
-    @Builder.Default
+    @OneToMany(mappedBy = "categoria",fetch = FetchType.EAGER)
     @ToString.Exclude
-    //@JsonManagedReference
+    @Builder.Default
     private List<Producto> productos = new ArrayList<>();
-
-
-    // Métodos helpers
 
     public void addProducto(Producto p) {
         p.setCategoria(this);
@@ -42,6 +36,7 @@ public class Categoria {
         this.getProductos().remove(p);
         p.setCategoria(null);
     }
+
 
     @Override
     public final boolean equals(Object o) {
