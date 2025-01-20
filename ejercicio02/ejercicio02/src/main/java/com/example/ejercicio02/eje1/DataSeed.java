@@ -17,6 +17,9 @@ public class DataSeed {
     @PostConstruct
     public void run() {
 
+
+
+
         List<Producto> productos;
         Producto p = Producto.builder()
                 .nombre("Un producto")
@@ -26,4 +29,5 @@ public class DataSeed {
 
 
     }
+
 }
