@@ -4,8 +4,8 @@ import com.example.singletable.models.Empleado;
 import org.springframework.context.annotation.Primary;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.NoRepositoryBean;
+import org.springframework.stereotype.Repository;
 
-@NoRepositoryBean
-public interface BaseEmpleadorepository<T extends Empleado> extends JpaRepository<T,Long> {
+public interface BaseEmpleadorepository extends JpaRepository<Empleado,Long> {
 
 }

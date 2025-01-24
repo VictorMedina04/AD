@@ -21,10 +21,10 @@ public class DataSeed {
     public void init() {
 
 
-        Moto vehiculo2 = new Moto(1L, "CITROEN", "SS", "5678 BBB", 49);
+        Moto vehiculo2 = new Moto("CITROEN", "SS", "5678 BBB", 49);
         motoRepository.save(vehiculo2);
 
-        Coche vehiculo3 = new Coche(1L, "PEUGEOT", "GG", "9123 CCC", 652);
+        Coche vehiculo3 = new Coche("PEUGEOT", "GG", "9123 CCC", 652);
         cocheRepository.save(vehiculo3);
 
         System.out.println(vehiculo2);

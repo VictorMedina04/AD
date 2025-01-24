@@ -1,16 +1,16 @@
 package com.example.singletable.models;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public abstract class Empleado {
+@DiscriminatorColumn(name = "empleado")
+public class Empleado {
 
     @Id
     @GeneratedValue
@@ -20,4 +20,11 @@ public abstract class Empleado {
     private String apellidos;
     private String departamento;
     private double sueldo;
+
+    public Empleado(String nombre, String apellidos, String departamento, double sueldo) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.departamento = departamento;
+        this.sueldo = sueldo;
+    }
 }
