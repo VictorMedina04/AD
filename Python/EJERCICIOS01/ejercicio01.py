@@ -6,37 +6,37 @@ diccionario={
     '2':'..---','3':'...--','4':'....-','5':'.....','6':'-....','7':'--...','8':'---..','9':'----.'
 }
 
-def text_to_morse(text):
-    text = text.upper()
-    morse_code = []
-    for char in text:
+def texto_a_morse(texto):
+    texto = texto.upper()
+    codigo_morse = []
+    for char in texto:
         if char in diccionario:
-            morse_code.append(diccionario[char])
+            codigo_morse.append(diccionario[char])
         else:
-            morse_code.append('')
-    return ' '.join(morse_code)
+            codigo_morse.append('')
+    return ' '.join(codigo_morse)
 
-def morse_to_text(morse):
+def morse_a_texto(morse):
     morse_code = morse.split(' ')
     reverse_diccionario = {v: k for k, v in diccionario.items()}
-    text = []
+    texto = []
     
     for code in morse_code:
         if code == '/':  
-            text.append(' ')
+            texto.append(' ')
         elif code in reverse_diccionario:
-            text.append(reverse_diccionario[code])
+            texto.append(reverse_diccionario[code])
         else:
-            text.append('?')
-    return ''.join(text)
+            texto.append('?')
+    return ''.join(texto)
 
-def detect_and_convert(text):
-    if all(c in ".- /" for c in text):
-        return morse_to_text(text)
+def transformador(texto):
+    if all(c in ".- /" for c in texto):
+        return morse_a_texto(texto)
     else:
-        return text_to_morse(text)
+        return texto_a_morse(texto)
 
 if __name__ == "__main__":
     input_text = input("Introduce texto o código morse: ")
-    print("Resultado de conversión:", detect_and_convert(input_text))
+    print("Resultado de conversión:", transformador(input_text))
 cadena = input("Introduce una cadena de texto: ")
