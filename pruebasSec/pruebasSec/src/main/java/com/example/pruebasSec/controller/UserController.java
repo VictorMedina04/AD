@@ -1,7 +1,7 @@
 package com.example.pruebasSec.controller;
 
-import com.example.pruebasSec.dto.GetUserDto;
-import com.example.pruebasSec.model.User;
+import com.example.pruebasSec.dto.CreateUserDto;
+import com.example.pruebasSec.dto.UserResponse;
 import com.example.pruebasSec.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -17,7 +17,7 @@ import java.util.UUID;
 public class UserController {
 
     private final UserService userService;
-
+/*
     @GetMapping
     public List<GetUserDto> getAll() {
         return userService.findAll().stream().map(GetUserDto::of).toList();
@@ -28,16 +28,19 @@ public class UserController {
         return GetUserDto.of(userService.findById(id).get());
     }
 
+ */
+
     @PostMapping
-    public ResponseEntity<GetUserDto> saveUser(@RequestBody User user) {
-        return ResponseEntity.status(HttpStatus.CREATED).body(GetUserDto.of(userService.save(user)));
+    public ResponseEntity<UserResponse> register (@RequestBody CreateUserDto createUserDto) {
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body(UserResponse.of(userService.createUser(createUserDto)));
     }
 
+    /*
     @PutMapping("/{id}")
     public GetUserDto editUser(@PathVariable UUID id, @RequestBody User user){
 
-
     }
-
+    */
 
 }

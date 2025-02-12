@@ -1,6 +1,8 @@
 package com.example.pruebasSec.service;
 
+import com.example.pruebasSec.dto.CreateUserDto;
 import com.example.pruebasSec.model.User;
+import com.example.pruebasSec.model.UserRole;
 import com.example.pruebasSec.repo.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -9,6 +11,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.UUID;
 
 @Service
@@ -26,9 +29,17 @@ public class UserService {
         return userRepository.findById(id);
     }
 
-    public User save(User user){
+    public User createUser(CreateUserDto createUserDto) {
+
+        User user = User.builder()
+                .username(createUserDto.username())
+                .password(passwordEncoder.encode(createUserDto.password()))
+                .roles(Set.of(UserRole.USER))
+                .build();
         return userRepository.save(user);
+
     }
+    /*
 
     public Optional<User> edit(UUID id, User user) {
 
@@ -55,5 +66,7 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
+
+     */
 
 }
