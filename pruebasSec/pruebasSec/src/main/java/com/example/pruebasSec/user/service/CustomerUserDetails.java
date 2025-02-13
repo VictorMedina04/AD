@@ -1,6 +1,6 @@
-package com.example.pruebasSec.service;
+package com.example.pruebasSec.user.service;
 
-import com.example.pruebasSec.repo.UserRepository;
+import com.example.pruebasSec.user.repo.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -15,8 +15,7 @@ public class CustomerUserDetails implements UserDetailsService {
 
 
     @Override
-    public UserDetails loadUserByUsername(String username)
-            throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         return userRepository.findFirstByUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("Username not found"));
     }

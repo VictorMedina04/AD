@@ -1,4 +1,4 @@
-package com.example.pruebasSec.model;
+package com.example.pruebasSec.user.model;
 
 import jakarta.persistence.*;
 import lombok.*;

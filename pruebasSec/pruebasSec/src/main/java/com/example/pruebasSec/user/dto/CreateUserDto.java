@@ -1,4 +1,4 @@
-package com.example.pruebasSec.dto;
+package com.example.pruebasSec.user.dto;
 
 public record CreateUserDto(
         String username,
