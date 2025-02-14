@@ -76,7 +76,12 @@ public class JwtService {
         try {
             jwtParser.parseClaimsJws(token);
             return true;
+<<<<<<< HEAD
         } catch(SignatureException | MalformedJwtException | ExpiredJwtException | UnsupportedJwtException | IllegalArgumentException ex) {
+=======
+        } catch (SignatureException | MalformedJwtException | ExpiredJwtException | UnsupportedJwtException |
+                 IllegalArgumentException ex) {
+>>>>>>> c3a8defcf2f7ec64680fb3a62dfe55b850e1778b
             throw new JwtException(ex.getMessage());
         }
 

@@ -22,7 +22,10 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
+<<<<<<< HEAD
     //private final UserService userService;
+=======
+>>>>>>> c3a8defcf2f7ec64680fb3a62dfe55b850e1778b
     private final UserRepository userRepository;
     private final JwtService jwtService;
 
@@ -33,7 +36,13 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
         // Validar el token
         // Si es válido, autenticar al usuario
+<<<<<<< HEAD
         if (StringUtils.hasText(token) && jwtService.validateAccessToken(token)) {
+=======
+
+        if (StringUtils.hasText(token) && jwtService.validateAccessToken(token)) {
+
+>>>>>>> c3a8defcf2f7ec64680fb3a62dfe55b850e1778b
             // Obtener el sub del token, que es el ID del usuario
             // Buscar el usuario por id
             // Colocar el usuario autenticado en el contexto de seguridad
@@ -65,6 +74,10 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         if (StringUtils.hasText(bearerToken) && bearerToken.startsWith(JwtService.TOKEN_PREFIX)) {
             return bearerToken.substring(JwtService.TOKEN_PREFIX.length());
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> c3a8defcf2f7ec64680fb3a62dfe55b850e1778b
         return null;
     }
 }

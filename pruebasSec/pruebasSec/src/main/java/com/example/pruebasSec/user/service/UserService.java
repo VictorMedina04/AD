@@ -1,7 +1,11 @@
 package com.example.pruebasSec.user.service;
 
+<<<<<<< HEAD
 import com.example.pruebasSec.user.dto.CreateUserRequest;
 import com.example.pruebasSec.user.dto.UserResponse;
+=======
+import com.example.pruebasSec.user.dto.CreateUserDto;
+>>>>>>> c3a8defcf2f7ec64680fb3a62dfe55b850e1778b
 import com.example.pruebasSec.user.model.User;
 import com.example.pruebasSec.user.model.UserRole;
 import com.example.pruebasSec.user.repo.UserRepository;
@@ -29,7 +33,11 @@ public class UserService {
         return userRepository.findById(id);
     }
 
+<<<<<<< HEAD
     public User createUser(CreateUserRequest createUserDto) {
+=======
+    public User createUser(CreateUserDto createUserDto) {
+>>>>>>> c3a8defcf2f7ec64680fb3a62dfe55b850e1778b
 
         User user = User.builder()
                 .username(createUserDto.username())
@@ -40,5 +48,8 @@ public class UserService {
 
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c3a8defcf2f7ec64680fb3a62dfe55b850e1778b
 }

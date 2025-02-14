@@ -46,6 +46,11 @@ public class SecurityConfig {
         p.setUserDetailsService(userDetailsService);
         p.setPasswordEncoder(passwordEncoder);
         return p;
+<<<<<<< HEAD
+=======
+
+    }
+>>>>>>> c3a8defcf2f7ec64680fb3a62dfe55b850e1778b
 
     }
 
@@ -56,12 +61,26 @@ public class SecurityConfig {
         http.cors(Customizer.withDefaults());
         http.sessionManagement((session) -> session
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+<<<<<<< HEAD
 
         http.authorizeHttpRequests(authz -> authz
                 .requestMatchers(HttpMethod.POST, "/auth/register", "/auth/login").permitAll()
                 .anyRequest().authenticated());
+=======
+        http.authorizeHttpRequests(authz -> authz
+                .requestMatchers(HttpMethod.POST, "/auth/register", "/auth/login").permitAll()
+                .anyRequest().authenticated());
+
+
+>>>>>>> c3a8defcf2f7ec64680fb3a62dfe55b850e1778b
         http.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }
+<<<<<<< HEAD
 }
+=======
+
+
+}
+>>>>>>> c3a8defcf2f7ec64680fb3a62dfe55b850e1778b

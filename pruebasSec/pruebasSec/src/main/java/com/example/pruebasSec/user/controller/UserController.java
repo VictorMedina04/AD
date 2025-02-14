@@ -1,7 +1,11 @@
 package com.example.pruebasSec.user.controller;
 
 import com.example.pruebasSec.security.jwt.access.JwtService;
+<<<<<<< HEAD
 import com.example.pruebasSec.user.dto.CreateUserRequest;
+=======
+import com.example.pruebasSec.user.dto.CreateUserDto;
+>>>>>>> c3a8defcf2f7ec64680fb3a62dfe55b850e1778b
 import com.example.pruebasSec.user.dto.LoginRequest;
 import com.example.pruebasSec.user.dto.UserResponse;
 import com.example.pruebasSec.user.model.User;
@@ -18,6 +22,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
+<<<<<<< HEAD
+=======
+@RequestMapping("/user")
+>>>>>>> c3a8defcf2f7ec64680fb3a62dfe55b850e1778b
 public class UserController {
 
     private final UserService userService;
@@ -25,7 +33,11 @@ public class UserController {
     private final JwtService jwtService;
 
     @PostMapping("/auth/register")
+<<<<<<< HEAD
     public ResponseEntity<UserResponse> register(@RequestBody CreateUserRequest createUserRequest) {
+=======
+    public ResponseEntity<UserResponse> register(@RequestBody CreateUserDto createUserRequest) {
+>>>>>>> c3a8defcf2f7ec64680fb3a62dfe55b850e1778b
         User user = userService.createUser(createUserRequest);
 
         return ResponseEntity.status(HttpStatus.CREATED)
@@ -35,11 +47,22 @@ public class UserController {
     @PostMapping("/auth/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest loginRequest) {
 
+<<<<<<< HEAD
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         loginRequest.username(),
                         loginRequest.password()
                 ));
+=======
+
+        Authentication authentication =
+                authenticationManager.authenticate(
+                        new UsernamePasswordAuthenticationToken(
+                                loginRequest.username(),
+                                loginRequest.password()
+                        )
+                );
+>>>>>>> c3a8defcf2f7ec64680fb3a62dfe55b850e1778b
 
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
@@ -57,4 +80,8 @@ public class UserController {
         return UserResponse.of(user);
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c3a8defcf2f7ec64680fb3a62dfe55b850e1778b
