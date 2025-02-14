@@ -1,6 +1,6 @@
-package com.example.pruebasSec.repo;
+package com.example.pruebasSec.user.repo;
 
-import com.example.pruebasSec.model.User;
+import com.example.pruebasSec.user.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

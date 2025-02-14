@@ -1,4 +1,4 @@
-package com.example.pruebasSec.model;
+package com.example.pruebasSec.user.model;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -15,14 +15,13 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
-@Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "user_entity")
-@EntityListeners(AuditingEntityListener.class)
+@Entity
+@Table(name="user_entity")
 public class User implements UserDetails {
 
     @Id
@@ -35,16 +34,8 @@ public class User implements UserDetails {
 
     private String password;
 
-
     @ElementCollection(fetch = FetchType.EAGER)
     private Set<UserRole> roles;
-
-    @CreatedDate
-    private LocalDateTime createdAt;
-
-    @Builder.Default
-    private LocalDateTime lastPasswordChangeAt = LocalDateTime.now();
-
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -53,5 +44,6 @@ public class User implements UserDetails {
                 .map(SimpleGrantedAuthority::new)
                 .collect(Collectors.toSet());
     }
+
 
 }
