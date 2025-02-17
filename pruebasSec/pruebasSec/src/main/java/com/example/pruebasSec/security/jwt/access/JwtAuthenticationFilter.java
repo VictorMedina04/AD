@@ -7,12 +7,15 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
+import org.springframework.web.servlet.HandlerExceptionResolver;
 
 import java.io.IOException;
 import java.util.Optional;
@@ -22,12 +25,13 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
-<<<<<<< HEAD
     //private final UserService userService;
-=======
->>>>>>> c3a8defcf2f7ec64680fb3a62dfe55b850e1778b
     private final UserRepository userRepository;
     private final JwtService jwtService;
+
+    @Autowired
+    @Qualifier("handlerExceptionResolver")
+    private HandlerExceptionResolver resolver;
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
@@ -36,36 +40,42 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
 
         // Validar el token
         // Si es válido, autenticar al usuario
-<<<<<<< HEAD
-        if (StringUtils.hasText(token) && jwtService.validateAccessToken(token)) {
-=======
+        try {
+            if (StringUtils.hasText(token) && jwtService.validateAccessToken(token)) {
 
-        if (StringUtils.hasText(token) && jwtService.validateAccessToken(token)) {
+                // Obtener el sub del token, que es el ID del usuario
+                // Buscar el usuario por id
+                // Colocar el usuario autenticado en el contexto de seguridad
 
->>>>>>> c3a8defcf2f7ec64680fb3a62dfe55b850e1778b
-            // Obtener el sub del token, que es el ID del usuario
-            // Buscar el usuario por id
-            // Colocar el usuario autenticado en el contexto de seguridad
+                UUID id = jwtService.getUserIdFromAccessToken(token);
 
-            UUID id = jwtService.getUserIdFromAccessToken(token);
+                Optional<User> result = userRepository.findById(id);
 
-            Optional<User> result = userRepository.findById(id);
+                if (result.isPresent()) {
+                    User user = result.get();
+                    UsernamePasswordAuthenticationToken
+                            authenticationToken = new UsernamePasswordAuthenticationToken(
+                            user,
+                            null,
+                            user.getAuthorities()
+                    );
 
-            if (result.isPresent()) {
-                User user = result.get();
-                UsernamePasswordAuthenticationToken
-                        authenticationToken = new UsernamePasswordAuthenticationToken(
-                        user,
-                        null,
-                        user.getAuthorities()
-                );
+                    authenticationToken.setDetails(new WebAuthenticationDetails(request));
 
-                authenticationToken.setDetails(new WebAuthenticationDetails(request));
+                    SecurityContextHolder.getContext().setAuthentication(authenticationToken);
 
-                SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+
+                }
+
+
             }
+        } catch (JwtException ex) {
+            resolver.resolveException(request, response, null, ex);
         }
+
+
         filterChain.doFilter(request, response);
+
     }
 
     private String getJwtAccessTokenFromRequest(HttpServletRequest request) {
@@ -74,10 +84,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         if (StringUtils.hasText(bearerToken) && bearerToken.startsWith(JwtService.TOKEN_PREFIX)) {
             return bearerToken.substring(JwtService.TOKEN_PREFIX.length());
         }
-<<<<<<< HEAD
-=======
 
->>>>>>> c3a8defcf2f7ec64680fb3a62dfe55b850e1778b
         return null;
     }
 }
