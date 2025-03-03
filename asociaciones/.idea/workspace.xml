@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="1a211728-83df-4309-9bcb-9b6a8a172da1" name="Changes" comment="" />
+=======
+    <list default="true" id="99e2c0a9-26cb-495f-99fc-cdf4b769e0b2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../SevillaBeerImports.mdj" beforeDir="false" />
+    </list>
+>>>>>>> 4cc0eb7b583eb3778a3bca16ad219199ff619100
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
+<<<<<<< HEAD
   "associatedIndex": 7
 }]]></component>
   <component name="ProjectId" id="2tXzcjcLJpzHFMN0AWenzXD1L3A" />
+=======
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2tUCb8FnMg7V1vJC3hWYc7EeNmA" />
+>>>>>>> 4cc0eb7b583eb3778a3bca16ad219199ff619100
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -18,18 +30,32 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+<<<<<<< HEAD
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/victo/Victor/2ºDAM/Acceso a datos/asociaciones"
+=======
+    "RunOnceActivity.git.unshallow": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/medina.levic24_trian/Desktop/Sevilla-Beer-Imports/sevillabeer"
+>>>>>>> 4cc0eb7b583eb3778a3bca16ad219199ff619100
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="1a211728-83df-4309-9bcb-9b6a8a172da1" name="Changes" comment="" />
       <created>1740513288500</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1740513288500</updated>
+=======
+      <changelist id="99e2c0a9-26cb-495f-99fc-cdf4b769e0b2" name="Changes" comment="" />
+      <created>1740397334508</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1740397334508</updated>
+>>>>>>> 4cc0eb7b583eb3778a3bca16ad219199ff619100
     </task>
     <servers />
   </component>
